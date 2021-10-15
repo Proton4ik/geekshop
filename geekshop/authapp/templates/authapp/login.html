@@ -6,4 +6,10 @@
     {{login_form.as_p}}
      <button type="submit" class="btn btn-primary">Войти</button>
 </form>
+<button class="btn btn-round form-control">
+        <a href="{% url 'auth:register' %}" class="">
+            зарегистрироваться
+        </a>
+    </button>
+
 {% endblock %}
