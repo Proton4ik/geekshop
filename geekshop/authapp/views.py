@@ -7,6 +7,7 @@ from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditF
 def login(request):
     title = 'вход'
 
+
     login_form = ShopUserLoginForm(data=request.POST)
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
@@ -19,7 +20,8 @@ def login(request):
 
     context = {
         'title': title,
-        'login_form': login_form
+        'login_form': login_form,
+
     }
     return render(request, 'authapp/login.html', context)
 
